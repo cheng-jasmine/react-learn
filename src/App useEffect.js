@@ -1,18 +1,31 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import "./App.css"
+import useScroll from './useScroll';
+
+function Page1(props) {
+  useScroll(props.location.pathname)
+  return <div className='page page1'>
+    Page1 经典美文，听写——让心情舒畅！每天上午10点准时与大家相见。Hints:Southern Africarly African American: Jumping the Broom In the times of slavery in this country, African American couples were not allowed to formally marry and live together. To make a public declaration of their love and commitment, a man and woman jumped over a broom into matrimony, to the beat of drums. The broom has long held significant meaning for the various Africans, symbolizing, the start of home - making for the newlywed couple. In Southern Africa, the day after the wedding, the bride assisted the other women in the family in sweeping the courtyard, indicating her dutiful willing ness to help her in-laws with housework till the newlyweds could move to their new home. Some African-American couples today are choosing to include this symbolic rite in their wedding ceremony.早期非洲裔美国人：跳扫帚在美国的黑奴时代，黑人男女是不允许正式结婚生活在一起的。为了向世人宣布他们的.爱情和婚约，一对黑人男女和着鼓声的节奏，一起跳过一把扫帚。（扫帚对各种非洲人长期来都具有很重要的意义，因为它意味着新婚夫妇组成家庭的开始。在南部非洲，新娘在婚后的第一天要帮助夫家的其他女性清扫院子，以此表明在住进自己的新家前，她愿意尽职地帮助丈夫的家人承担家务劳动。）直至今日，一些美国黑人还在他们的婚礼上举行这种象征性的仪式。这篇材料你能听出多少？点击这里做听写，提高外语水平经典美文，听写——让心情舒畅！每天上午10点准时与大家相见。Hints:Southern Africarly African American: Jumping the Broom In the times of slavery in this country, African American couples were not allowed to formally marry and live together. To make a public declaration of their love and commitment, a man and woman jumped over a broom into matrimony, to the beat of drums. The broom has long held significant meaning for the various Africans, symbolizing, the start of home - making for the newlywed couple. In Southern Africa, the day after the wedding, the bride assisted the other women in the family in sweeping the courtyard, indicating her dutiful willing ness to help her in-laws with housework till the newlyweds could move to their new home. Some African-American couples today are choosing to include this symbolic rite in their wedding ceremony.早期非洲裔美国人：跳扫帚在美国的黑奴时代，黑人男女是不允许正式结婚生活在一起的。为了向世人宣布他们的.爱情和婚约，一对黑人男女和着鼓声的节奏，一起跳过一把扫帚。（扫帚对各种非洲人长期来都具有很重要的意义，因为它意味着新婚夫妇组成家庭的开始。在南部非洲，新娘在婚后的第一天要帮助夫家的其他女性清扫院子，以此表明在住进自己的新家前，她愿意尽职地帮助丈夫的家人承担家务劳动。）直至今日，一些美国黑人还在他们的婚礼上举行这种象征性的仪式。这篇材料你能听出多少？点击这里做听写，提高外语水平经典美文，听写——让心情舒畅！每天上午10点准时与大家相见。Hints:Southern Africarly African American: Jumping the Broom In the times of slavery in this country, African American couples were not allowed to formally marry and live together. To make a public declaration of their love and commitment, a man and woman jumped over a broom into matrimony, to the beat of drums. The broom has long held significant meaning for the various Africans, symbolizing, the start of home - making for the newlywed couple. In Southern Africa, the day after the wedding, the bride assisted the other women in the family in sweeping the courtyard, indicating her dutiful willing ness to help her in-laws with housework till the newlyweds could move to their new home. Some African-American couples today are choosing to include this symbolic rite in their wedding ceremony.早期非洲裔美国人：跳扫帚在美国的黑奴时代，黑人男女是不允许正式结婚生活在一起的。为了向世人宣布他们的.爱情和婚约，一对黑人男女和着鼓声的节奏，一起跳过一把扫帚。（扫帚对各种非洲人长期来都具有很重要的意义，因为它意味着新婚夫妇组成家庭的开始。在南部非洲，新娘在婚后的第一天要帮助夫家的其他女性清扫院子，以此表明在住进自己的新家前，她愿意尽职地帮助丈夫的家人承担家务劳动。）直至今日，一些美国黑人还在他们的婚礼上举行这种象征性的仪式。这篇材料你能听出多少？点击这里做听写，提高外语水平
+  </div>
+}
+
+function Page2(props) {
+  useScroll(props.location.pathname)
+  return <div className='page page2'>
+    Page2 经典美文，听写——让心情舒畅！每天上午10点准时与大家相见。Hints:Southern Africarly African American: Jumping the Broom In the times of slavery in this country, African American couples were not allowed to formally marry and live together. To make a public declaration of their love and commitment, a man and woman jumped over a broom into matrimony, to the beat of drums. The broom has long held significant meaning for the various Africans, symbolizing, the start of home - making for the newlywed couple. In Southern Africa, the day after the wedding, the bride assisted the other women in the family in sweeping the courtyard, indicating her dutiful willing ness to help her in-laws with housework till the newlyweds could move to their new home. Some African-American couples today are choosing to include this symbolic rite in their wedding ceremony.早期非洲裔美国人：跳扫帚在美国的黑奴时代，黑人男女是不允许正式结婚生活在一起的。为了向世人宣布他们的.爱情和婚约，一对黑人男女和着鼓声的节奏，一起跳过一把扫帚。（扫帚对各种非洲人长期来都具有很重要的意义，因为它意味着新婚夫妇组成家庭的开始。在南部非洲，新娘在婚后的第一天要帮助夫家的其他女性清扫院子，以此表明在住进自己的新家前，她愿意尽职地帮助丈夫的家人承担家务劳动。）直至今日，一些美国黑人还在他们的婚礼上举行这种象征性的仪式。这篇材料你能听出多少？点击这里做听写，提高外语水平&gt;&gt;经典美文，听写——让心情舒畅！每天上午10点准时与大家相见。Hints:Southern Africarly African American: Jumping the Broom In the times of slavery in this country, African American couples were not allowed to formally marry and live together. To make a public declaration of their love and commitment, a man and woman jumped over a broom into matrimony, to the beat of drums. The broom has long held significant meaning for the various Africans, symbolizing, the start of home - making for the newlywed couple. In Southern Africa, the day after the wedding, the bride assisted the other women in the family in sweeping the courtyard, indicating her dutiful willing ness to help her in-laws with housework till the newlyweds could move to their new home. Some African-American couples today are choosing to include this symbolic rite in their wedding ceremony.早期非洲裔美国人：跳扫帚在美国的黑奴时代，黑人男女是不允许正式结婚生活在一起的。为了向世人宣布他们的.爱情和婚约，一对黑人男女和着鼓声的节奏，一起跳过一把扫帚。（扫帚对各种非洲人长期来都具有很重要的意义，因为它意味着新婚夫妇组成家庭的开始。在南部非洲，新娘在婚后的第一天要帮助夫家的其他女性清扫院子，以此表明在住进自己的新家前，她愿意尽职地帮助丈夫的家人承担家务劳动。）直至今日，一些美国黑人还在他们的婚礼上举行这种象征性的仪式。这篇材料你能听出多少？点击这里做听写，提高外语水平经典美文，听写——让心情舒畅！每天上午10点准时与大家相见。Hints:Southern Africarly African American: Jumping the Broom In the times of slavery in this country, African American couples were not allowed to formally marry and live together. To make a public declaration of their love and commitment, a man and woman jumped over a broom into matrimony, to the beat of drums. The broom has long held significant meaning for the various Africans, symbolizing, the start of home - making for the newlywed couple. In Southern Africa, the day after the wedding, the bride assisted the other women in the family in sweeping the courtyard, indicating her dutiful willing ness to help her in-laws with housework till the newlyweds could move to their new home. Some African-American couples today are choosing to include this symbolic rite in their wedding ceremony.早期非洲裔美国人：跳扫帚在美国的黑奴时代，黑人男女是不允许正式结婚生活在一起的。为了向世人宣布他们的.爱情和婚约，一对黑人男女和着鼓声的节奏，一起跳过一把扫帚。（扫帚对各种非洲人长期来都具有很重要的意义，因为它意味着新婚夫妇组成家庭的开始。在南部非洲，新娘在婚后的第一天要帮助夫家的其他女性清扫院子，以此表明在住进自己的新家前，她愿意尽职地帮助丈夫的家人承担家务劳动。）直至今日，一些美国黑人还在他们的婚礼上举行这种象征性的仪式。这篇材料你能听出多少？点击这里做听写，提高外语水平
+  </div>
+}
 
 export default function App() {
-  const [n, setN] = useState(0)
-
-  useEffect(() => {
-    console.log("改变页面标题的副作用操作", n)
-    document.title = `计数器：${n}`
-  }, [n])
   return (
-    <div>
-      <span>{n}</span>
-      <button onClick={() => {
-        setN(n + 1)
-      }}>+</button>
-    </div>
+    <Router>
+      <Route path="/page1" component={Page1} />
+      <Route path="/page2" component={Page2} />
+      <div className="nav">
+        <NavLink to="/page1">页面1</NavLink>
+        <NavLink to="/page2">页面2</NavLink>
+      </div>
+    </Router>
   )
 }
