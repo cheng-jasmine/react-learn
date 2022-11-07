@@ -1,24 +1,38 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import { Route, Link } from "react-router-dom";
+import RouteGuard from './RouteGuard';
 
-const ctx = React.createContext()
+function Page1() {
+  return <h1>Page1</h1>
+}
 
-// function Text() {
-//   return <ctx.Consumer>
-//     {value => <h1>Test，上下文的值：{value}</h1>}
-//   </ctx.Consumer>
-// }
-
-function Text() {
-  const value = useContext(ctx)
-  return <h1>Test，上下文的值：{value}</h1>
+function Page2() {
+  return <h1>Page2</h1>
 }
 
 export default function App() {
   return (
-    <div>
-      <ctx.Provider value={122}>
-        <Text />
-      </ctx.Provider>
-    </div>
+    <RouteGuard
+      onBeforeChange={(prev, cur, action, commit, unBlock) => {
+        console.log(`从${prev.pathname}跳转到${cur.pathname}，跳转方式：${action}`)
+        commit(true)
+        // unBlock() //取消阻塞，这里仅阻塞了一次
+      }}
+      onChange={(preLocation, location, action, unListen) => {
+        console.log(`日志：从${preLocation.pathname}跳转到${location.pathname}，跳转方式：${action}`)
+        // unListen() // 取消监听，这里仅监听了一次
+      }}>
+      <ul>
+        <li>
+          <Link to="/page1">页面1</Link>
+        </li>
+        <li>
+          <Link to="/page2">页面2</Link>
+        </li>
+      </ul>
+
+      <Route path='/page1' component={Page1} />
+      <Route path='/page2' component={Page2} />
+    </RouteGuard>
   )
 }
